@@ -10,81 +10,76 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Malayalam:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --paper-bg: #fdfaf1; /* പ്രീമിയം പേപ്പർ നിറം */
-            --ink-blue: #1e293b;
-            --margin-line: rgba(220, 38, 38, 0.15); /* മാർജിൻ ലൈൻ */
+            --paper-bg: #fdfaf1; /* Eye-friendly cream paper */
+            --ink-color: #1a202c;
+            --highlight: #fef3c7;
         }
 
         body {
             font-family: 'Noto Serif Malayalam', serif;
-            background-color: #d1d5db; /* മേശയുടെ നിറം (Desk background) */
-            color: var(--ink-blue);
+            background-color: #d1d5db; /* Desk/Table color */
             margin: 0;
-            padding: 20px 10px;
+            padding: 10px;
         }
 
-        /* പേപ്പർ ഇഫക്റ്റ് */
-        .legal-paper {
+        /* The Paper Container */
+        .paper-sheet {
             background-color: var(--paper-bg);
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
             min-height: 100vh;
-            padding: 40px 30px;
+            padding: 2rem; /* Balanced padding for all sides */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            border-radius: 2px;
-            /* വരികൾ വരച്ച പേപ്പർ പോലെ തോന്നിക്കാൻ */
-            background-image: linear-gradient(#e5e7eb 1px, transparent 1px);
+            /* Subtle horizontal lines that don't shift text */
+            background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px);
             background-size: 100% 1.8rem;
-            line-height: 1.8rem;
         }
 
-        /* മൊബൈലിൽ മാർജിൻ ഓവർലാപ്പ് ഒഴിവാക്കാൻ */
-        @media (max-width: 768px) {
-            .legal-paper {
-                padding: 25px 15px;
-                background-image: none; /* മൊബൈലിൽ ലൈനുകൾ ഒഴിവാക്കുന്നു */
-                border-left: 5px solid var(--margin-line); /* മാർജിൻ സൈഡിലേക്ക് മാറ്റുന്നു */
-            }
-            body { padding: 10px 5px; }
+        /* Fixed Margin: Instead of pushing text, we put a thin border */
+        .paper-sheet {
+            border-left: 4px solid rgba(239, 68, 68, 0.2); /* Soft red margin line */
         }
 
-        /* ഡെസ്ക്ടോപ്പിൽ റെഡ് മാർജിൻ ലൈൻ */
-        @media (min-width: 769px) {
-            .legal-paper::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 60px;
-                width: 2px;
-                height: 100%;
-                background-color: var(--margin-line);
+        @media (max-width: 640px) {
+            body { padding: 0; }
+            .paper-sheet {
+                padding: 1.25rem; /* More space for text on mobile */
+                border-left-width: 3px;
             }
-            .content-area { margin-left: 50px; }
+            .legal-maxim {
+                font-size: 0.95rem;
+            }
         }
 
         .statute-badge {
-            background-color: #f1f5f9;
-            border: 1px solid #cbd5e1;
-            padding: 0 5px;
-            border-radius: 3px;
+            background-color: var(--highlight);
+            border-bottom: 2px solid #f59e0b;
+            padding: 0 4px;
             font-weight: bold;
-            font-size: 0.9em;
             color: #b91c1c;
         }
 
         .legal-maxim {
             display: block;
-            background: rgba(255, 255, 255, 0.6);
-            border-left: 4px solid #64748b;
-            padding: 10px;
-            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #475569;
+            padding: 12px;
+            margin: 1.5rem 0;
             font-style: italic;
-            color: #334155;
         }
 
-        h1 { border-bottom: 2px solid #334155; padding-bottom: 10px; }
-        section { margin-bottom: 40px; border-bottom: 1px dashed #cbd5e1; padding-bottom: 20px; }
+        h2 {
+            background-color: rgba(30, 58, 138, 0.05);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            line-height: 1.9;
+        }
     </style>
 </head>
 <body class="py-4 px-2 md:py-12 md:px-3">
