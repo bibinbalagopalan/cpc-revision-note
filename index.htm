@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPC Revision Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Malayalam:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper-color: #fcfaf2;
+            --ink-color: #1e293b;
+            --legal-blue: #2563eb;
+        }
+
+        body {
+            font-family: 'Noto Serif Malayalam', serif;
+            background-color: #e5e7eb; /* Desk color */
+            color: var(--ink-color);
+            line-height: 1.8;
+        }
+
+        /* Paper Texture Effect */
+        .paper {
+            background-color: var(--paper-color);
+            background-image: 
+                linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+                linear-gradient(#eee .1em, transparent .1em);
+            background-size: 100% 1.6em;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .paper::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 80px;
+            width: 2px; height: 100%;
+            background-color: rgba(255, 0, 0, 0.2);
+        }
+
+        .section-box {
+            border-bottom: 1px solid #d1d5db;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .legal-maxim {
+            font-style: italic;
+            color: #475569;
+            font-family: serif;
+            display: block;
+            margin: 0.5rem 0;
+            border-left: 3px solid #cbd5e1;
+            padding-left: 1rem;
+        }
+
+        .statute-badge {
+            background-color: #e2e8f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body class="py-6 px-3 md:py-12">
+
+    <main class="max-w-3xl mx-auto paper rounded-sm p-6 md:p-12 min-h-screen">
+        
+        <div class="ml-16 md:ml-20 mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 leading-tight border-b-4 border-slate-800 inline-block pb-2">
+                സിവിൽ നടപടിക്രമം (CPC)
+            </h1>
+            <p class="text-slate-500 mt-2 uppercase tracking-widest text-sm">Exam Revision Guide • Step-by-Step</p>
+        </div>
+
+        <div class="ml-16 md:ml-20">
+
+            <section class="section-box">
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mb-4">
+                    ഘട്ടം 1: പ്രാരംഭം – അധികാരപരിധിയും കേസിനു മുൻപുള്ള നടപടിക്രമങ്ങളും
+                </h2>
+                
+                <div class="space-y-4 text-justify">
+                    <p class="font-semibold text-slate-600">ഒരു സിവിൽ കേസ് ഫയൽ ചെയ്യുന്നതിന് മുൻപ് ചില നിർണ്ണായകമായ പരിശോധനകൾ നടത്തേണ്ടതുണ്ട്.</p>
+                    
+                    <div>
+                        <span class="font-bold underline">1. അധികാരപരിധി (Jurisdiction):</span>
+                        <p class="mt-1">അവകാശവാദത്തിന്റെ മൂല്യം <span class="statute-badge">S.15</span>, കേസിനാസ്പദമായ സ്ഥലം എന്നിവയുടെ അടിസ്ഥാനത്തിൽ ശരിയായ കോടതിയെ കണ്ടെത്തുക.</p>
+                        
+                        <span class="legal-maxim">Actor sequitur forum rei (The plaintiff follows the forum of the defendant)</span>
+                        <p>സാധാരണയായി, പ്രതി താമസിക്കുന്നതോ ജോലി ചെയ്യുന്നതോ ആയ സ്ഥലത്താണ് കേസ് ഫയൽ ചെയ്യേണ്ടത് <span class="statute-badge">S.20</span>. അനങ്ങാത്ത സ്വത്തുക്കളുമായി (Immovable property) ബന്ധപ്പെട്ട കേസുകൾ ആ സ്വത്ത് സ്ഥിതി ചെയ്യുന്ന കോടതിയിൽ വേണം ഫയൽ ചെയ്യാൻ <span class="statute-badge">S.16, S.17</span>.</p>
+                    </div>
+
+                    <div>
+                        <span class="legal-maxim">Ubicumque est injuria, ibi damnum sequitur (Wherever there is a wrong, there follows damage)</span>
+                        <p>ഉപദ്രവങ്ങൾക്കോ നഷ്ടങ്ങൾക്കോ വേണ്ടിയുള്ള നഷ്ടപരിഹാരക്കേസുകൾ ആ തെറ്റ് നടന്ന സ്ഥലത്തെ കോടതിയിൽ ഫയൽ ചെയ്യാം <span class="statute-badge">S.19</span>.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">2. കേസിനുള്ള വിലക്കുകൾ (Bar to Suit):</span>
+                        <ul class="list-disc ml-5 mt-2 space-y-2">
+                            <li><strong>Res judicata</strong> <span class="statute-badge">S.11</span>: നേരത്തെ തീർപ്പുകല്പിക്കപ്പെട്ട കേസ് വീണ്ടും ഫയൽ ചെയ്യാൻ സാധിക്കില്ല.</li>
+                            <li>മുൻപത്തെ വിധി അനുസരിച്ച് തടയപ്പെട്ട കേസ് <span class="statute-badge">S.12</span>.</li>
+                            <li>വിദേശ കോടതിവിധി അന്തിമമല്ലാത്ത സാഹചര്യം <span class="statute-badge">S.13</span>.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">3. കക്ഷികളും നോട്ടീസും:</span>
+                        <p class="mt-2">ഉചിതമായ എല്ലാ കക്ഷികളെയും കേസിൽ ഉൾപ്പെടുത്തിയിട്ടുണ്ടെന്ന് ഉറപ്പുവരുത്തുക <span class="statute-badge">O.1, R.1 & R.3</span>. കക്ഷികളെ തെറ്റായി ചേർക്കുന്നതോ ചേർക്കാതിരിക്കുന്നതോ കേസിന്റെ അടിസ്ഥാനത്തെ ബാധിക്കുന്നില്ലെങ്കിൽ അത് കേസ് തള്ളിക്കളയാൻ കാരണമാകില്ല <span class="statute-badge">O.1, R.9 & R.13</span>.</p>
+                        <p class="mt-2">ഗവൺമെന്റിന് എതിരെയാണ് കേസെങ്കിൽ, <span class="statute-badge">S.80</span> പ്രകാരമുള്ള നിർബന്ധിത നോട്ടീസ് നൽകിയിരിക്കണം.</p>
+                    </div>
+
+                    <div class="bg-blue-50 p-4 border-l-4 border-blue-400 rounded">
+                        <p class="text-sm italic"><strong>പ്രത്യേക ശ്രദ്ധയ്ക്ക്:</strong> പ്രായപൂർത്തിയാകാത്തവർ (O.32), സാമ്പത്തികശേഷി ഇല്ലാത്തവർ (O.33), പൊതുശല്യം (S.91) എന്നിവയ്ക്ക് പ്രത്യേക നടപടിക്രമങ്ങളുണ്ട്.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section-box">
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mb-4">
+                    ഘട്ടം 2: തുടക്കം – കേസ് ഫയൽ ചെയ്യലും വാദമുഖങ്ങളും (Pleadings)
+                </h2>
+                
+                <div class="space-y-4 text-justify">
+                    <p class="font-semibold text-slate-600">പ്ലീഡിംഗുകളിലൂടെയാണ് (Pleadings) കേസിലെ തർക്കവിഷയങ്ങൾ വ്യക്തമാക്കപ്പെടുന്നത്.</p>
+                    
+                    <div>
+                        <span class="font-bold underline">1. പ്ലെയിന്റ് ഫയൽ ചെയ്യൽ (Filing the Plaint):</span>
+                        <p class="mt-1">വാദി (Plaintiff) പ്ലെയിന്റ് ഫയൽ ചെയ്യുന്നതിലൂടെയാണ് കേസ് ആരംഭിക്കുന്നത് <span class="statute-badge">S.26, O.4, R.1</span>. ഇതിൽ പ്രധാനപ്പെട്ട വസ്തുതകൾ (<span class="italic">Material facts</span> - <span class="statute-badge">O.6, R.2</span>), കേസിനാസ്പദമായ കാരണം (Cause of action), ആവശ്യപ്പെടുന്ന പരിഹാരങ്ങൾ, അനുബന്ധ രേഖകൾ എന്നിവ ഉണ്ടായിരിക്കണം <span class="statute-badge">O.7, R.14</span>.</p>
+                        
+                        <div class="bg-yellow-50 p-3 mt-2 border-l-2 border-yellow-400 text-sm">
+                            കോടതി പ്ലെയിന്റ് പരിശോധിക്കുകയും അധികാരപരിധിയില്ലെങ്കിൽ അത് <strong>തിരികെ നൽകുകയോ (Return - O.7, R.10)</strong>, മതിയായ കാരണങ്ങളില്ലെങ്കിൽ <strong>തള്ളിക്കളയുകയോ (Rejection - O.7, R.11)</strong> ചെയ്തേക്കാം.
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">2. കാവിയറ്റ് (Caveat):</span>
+                        <p class="mt-1">തനിക്കെതിരെ കേസ് വരാൻ സാധ്യതയുണ്ടെന്ന് കരുതുന്ന വ്യക്തിക്ക് (ഉദാഹരണത്തിന് പ്രതിയാകാൻ സാധ്യതയുള്ളയാൾ) തന്റെ ഭാഗം കേൾക്കാതെ ഇടക്കാല ഉത്തരവുകൾ പുറപ്പെടുവിക്കാതിരിക്കാൻ കോടതിയിൽ <strong>കാവിയറ്റ്</strong> ഫയൽ ചെയ്യാം <span class="statute-badge">S.148A</span>.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">3. സമ്മൻസ് അയയ്ക്കൽ (Issue of Summons):</span>
+                        <p class="mt-1">പ്ലെയിന്റ് സ്വീകരിച്ചാൽ കോടതി പ്രതികൾക്ക് <strong>സമ്മൻസ്</strong> അയയ്ക്കുന്നു <span class="statute-badge">O.5, R.1</span>. ഇത് നേരിട്ടോ, പ്രതി ഒളിച്ചുമാറുകയാണെങ്കിൽ പത്രപ്പരസ്യം വഴിയോ (Substituted service - <span class="statute-badge">O.5, R.20</span>), അല്ലെങ്കിൽ ഒരു ഏജന്റ് വഴിയോ കുടുംബാംഗം വഴിയോ നൽകാവുന്നതാണ് <span class="statute-badge">O.5, R.15</span>.</p>
+                        <p class="mt-2 text-sm italic text-slate-500">മറ്റ് സംസ്ഥാനങ്ങളിലോ വിദേശത്തോ ഉള്ള പ്രതികൾക്ക് സമ്മൻസ് അയയ്ക്കാൻ പ്രത്യേക നിയമങ്ങളുണ്ട് <span class="statute-badge">S.28, S.29</span>.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section-box">
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mb-4">
+                    ഘട്ടം 3: മറുപടി – ഹാജരാകലും എഴുതിത്തയ്യാറാക്കിയ മറുപടിയും (Written Statement)
+                </h2>
+                
+                <div class="space-y-4 text-justify">
+                    <p class="font-semibold text-slate-600">പ്രതികൾ തങ്ങളുടെ ഭാഗം കോടതിക്ക് മുൻപാകെ സമർപ്പിക്കുന്ന ഘട്ടമാണിത്.</p>
+                    
+                    <div>
+                        <span class="font-bold underline">1. കക്ഷികൾ ഹാജരാകലും ഹാജരാകാതിരിക്കലും:</span>
+                        <p class="mt-1">നിശ്ചയിച്ച ദിവസം കക്ഷികൾ ഹാജരാകണം <span class="statute-badge">O.9, R.1</span>. വാദി മാത്രം ഹാജരാകുകയും പ്രതി വരാതിരിക്കുകയും ചെയ്താൽ കോടതി <strong>എക്സ്-പാർട്ടി വിധി (Ex-parte decree)</strong> പുറപ്പെടുവിച്ചേക്കാം <span class="statute-badge">O.9, R.6</span>.</p>
+                        
+                        <p class="mt-2">നേരെമറിച്ച്, പ്രതി മാത്രം ഹാജരാകുകയും വാദി വരാതിരിക്കുകയും ചെയ്താൽ കേസ് തള്ളിക്കളയാവുന്നതാണ് <span class="statute-badge">O.9, R.8</span>. മതിയായ കാരണം ബോധിപ്പിച്ചാൽ എക്സ്-പാർട്ടി വിധി റദ്ദാക്കാൻ അപേക്ഷ നൽകാം <span class="statute-badge">O.9, R.13</span>.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">2. റിട്ടൺ സ്റ്റേറ്റ്‌മെന്റ് ഫയൽ ചെയ്യൽ (Written Statement):</span>
+                        <p class="mt-1">പരാതിയിലെ ആരോപണങ്ങൾ നിഷേധിച്ചുകൊണ്ടും നിയമപരമായ തടസ്സങ്ങൾ (അധികാരപരിധി സംബന്ധിച്ച തടസ്സങ്ങൾ ഉൾപ്പെടെ - <span class="statute-badge">S.21</span>) ഉന്നയിച്ചുകൊണ്ടും പ്രതി മറുപടി സമർപ്പിക്കുന്നു <span class="statute-badge">O.8, R.1</span>.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">3. സെറ്റ്-ഓഫും കൗണ്ടർ ക്ലെയിമും (Set-Off & Counter-Claim):</span>
+                        <p class="mt-1">പ്രതിക്ക് വാദിയിൽ നിന്ന് പണം ലഭിക്കാനുണ്ടെങ്കിൽ അത് <strong>സെറ്റ്-ഓഫ് (Set-off)</strong> ആയി ആവശ്യപ്പെടാം <span class="statute-badge">O.8, R.6</span>. കൂടാതെ, വാദിക്കെതിരെ സ്വതന്ത്രമായ മറ്റൊരു അവകാശവാദം <strong>കൗണ്ടർ ക്ലെയിം (Counter-claim)</strong> ആയി ഉന്നയിക്കാനും സാധിക്കും <span class="statute-badge">O.8, R.6A</span>. ഇത് മറ്റൊരു കേസായി പരിഗണിക്കപ്പെടും.</p>
+                    </div>
+
+                    <div>
+                        <span class="legal-maxim">Expressio unius est exclusio alterius (ഒന്നിനെ വ്യക്തമായി പരാമർശിക്കുന്നത് മറ്റുള്ളവയെ ഒഴിവാക്കുന്നതിന് തുല്യമാണ്)</span>
+                        <p class="text-sm italic text-slate-500">റിട്ടൺ സ്റ്റേറ്റ്‌മെന്റിൽ ഒരു പ്രത്യേക പ്രതിരോധം (Defense) കൃത്യമായി ഉന്നയിച്ചില്ലെങ്കിൽ, ആ അവകാശം പിന്നീട് ഉപേക്ഷിച്ചതായി (Waiver) കണക്കാക്കപ്പെടാം.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section-box">
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mb-4">
+                    ഘട്ടം 4: ഇടക്കാല ഘട്ടം – ഇടക്കാല ആശ്വാസങ്ങളും നടപടിക്രമങ്ങളും
+                </h2>
+                
+                <div class="space-y-4 text-justify">
+                    <p class="font-semibold text-slate-600">അന്തിമ വിധി വരുന്നത് വരെ കക്ഷികളുടെ അവകാശങ്ങൾ സംരക്ഷിക്കപ്പെടുന്ന ഘട്ടമാണിത്.</p>
+                    
+                    <div>
+                        <span class="font-bold underline">1. താൽക്കാലിക ഇൻജംഗ്ഷൻ (Temporary Injunctions):</span>
+                        <p class="mt-1">തർക്കത്തിലുള്ള സ്വത്ത് കൈമാറ്റം ചെയ്യുന്നതോ നശിപ്പിക്കുന്നതോ തടയാൻ കോടതിയിൽ നിന്ന് ഇൻജംഗ്ഷൻ ഉത്തരവ് വാങ്ങാം <span class="statute-badge">O.39</span>. കോടതി ഇവിടെ <span class="italic">Ubi jus ibi remedium</span> എന്ന തത്വം പിന്തുടരുന്നു.</p>
+                        
+                        <span class="legal-maxim">Ubi jus ibi remedium (എവിടെ അവകാശമുണ്ടോ അവിടെ പരിഹാരവുമുണ്ട്)</span>
+                        <p class="text-sm italic">ഇൻജംഗ്ഷൻ അപേക്ഷകൾ സാധാരണയായി 30 ദിവസത്തിനുള്ളിൽ തീർപ്പാക്കേണ്ടതാണ് <span class="statute-badge">O.39, R.3A</span>.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">2. വിധിക്ക് മുൻപുള്ള അറസ്റ്റ് അല്ലെങ്കിൽ അറ്റാച്ച്‌മെന്റ് (Arrest/Attachment Before Judgment):</span>
+                        <p class="mt-1">പ്രതി രാജ്യം വിട്ടു പോകാനോ സ്വത്തുക്കൾ കടത്താനോ സാധ്യതയുണ്ടെങ്കിൽ, ഭാവിയിലെ വിധി നടപ്പിലാക്കുന്നത് തടസ്സപ്പെടാതിരിക്കാൻ കോടതിക്ക് പ്രതിയെ അറസ്റ്റ് ചെയ്യാനോ സ്വത്ത് അറ്റാച്ച് ചെയ്യാനോ ഉത്തരവിടാം <span class="statute-badge">O.38</span>.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">3. റിസീവറെ നിയമിക്കൽ (Appointment of Receiver):</span>
+                        <p class="mt-1">തർക്കത്തിലുള്ള സ്വത്ത് കൃത്യമായി പരിപാലിക്കാൻ കോടതിക്ക് ഒരു <strong>റിസീവറെ</strong> നിയമിക്കാം <span class="statute-badge">O.40</span>. കേസ് നിലനിൽക്കുന്ന കാലയളവിൽ (<span class="italic">Pendente lite</span>) സ്വത്തിന്റെ സംരക്ഷണം ഇദ്ദേഹത്തിന്റെ ചുമതലയായിരിക്കും.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">4. ഡിസ്കവറി, ഇന്ററോഗേറ്ററീസ് & ഇൻസ്പെക്ഷൻ (S.30):</span>
+                        <p class="mt-1">കേസുമായി ബന്ധപ്പെട്ട രേഖകൾ വെളിപ്പെടുത്താനോ ചോദ്യങ്ങൾക്ക് മറുപടി നൽകാനോ കക്ഷികളെ നിർബന്ധിക്കാൻ കോടതിക്ക് അധികാരമുണ്ട് <span class="statute-badge">S.30</span>. ഇത് തർക്കവിഷയങ്ങൾ ലഘൂകരിക്കാൻ സഹായിക്കുന്നു.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section-box">
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mb-4">
+                    ഘട്ടം 5: വിചാരണ – ഇഷ്യൂകൾ തയാറാക്കലും തെളിവെടുപ്പും
+                </h2>
+                
+                <div class="space-y-4 text-justify">
+                    <p class="font-semibold text-slate-600">വസ്തുതകളും നിയമങ്ങളും തമ്മിലുള്ള യഥാർത്ഥ പോരാട്ടം നടക്കുന്നത് ഈ ഘട്ടത്തിലാണ്.</p>
+                    
+                    <div>
+                        <span class="font-bold underline">1. കക്ഷികളെ പരിശോധിക്കൽ (O.10):</span>
+                        <p class="mt-1">വാദം വ്യക്തമാക്കുന്നതിനായി കോടതിക്ക് കക്ഷികളെ നേരിട്ട് പരിശോധിക്കാം. കൂടാതെ തർക്കപരിഹാരത്തിനായി എ.ഡി.ആർ (ADR) മാർഗങ്ങൾ സ്വീകരിക്കാൻ കോടതി നിർദേശിച്ചേക്കാം <span class="statute-badge">S.89, O.10, R.1A</span>.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">2. ഇഷ്യൂകൾ തയാറാക്കൽ (Framing of Issues - O.14):</span>
+                        <p class="mt-1">പരാതിയിൽ നിന്നും മറുപടിയിൽ നിന്നും ഉടലെടുക്കുന്ന തർക്കവിഷയങ്ങളെ (വസ്തുതയായാലും നിയമമായാലും) കോടതി പ്രത്യേകം പോയിന്റുകളായി തയാറാക്കുന്നു. വിധിയുടെ അടിസ്ഥാനം ഈ ഇഷ്യൂകളാണ്.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">3. തെളിവ് ഹാജരാക്കാനുള്ള ബാധ്യത (Burden of Proof):</span>
+                        <span class="legal-maxim">Affirmanti incumbit probatio (ഒരു കാര്യം വാദിക്കുന്നവൻ തന്നെ അത് തെളിയിക്കാൻ ബാധ്യസ്ഥനാണ്)</span>
+                        <p class="mt-1">സാക്ഷികൾ വഴിയും രേഖകൾ വഴിയും കക്ഷികൾ തെളിവുകൾ ഹാജരാക്കുന്നു <span class="statute-badge">O.16</span>. സാക്ഷികളെ വിസ്തരിക്കാനോ സ്ഥലപരിശോധന നടത്താനോ കോടതിക്ക് കമ്മീഷനുകളെ നിയമിക്കാം <span class="statute-badge">O.26</span>. സമ്മൻസ് അനുസരിക്കാത്തവർക്ക് പിഴ ശിക്ഷ നൽകാൻ കോടതിക്ക് അധികാരമുണ്ട് <span class="statute-badge">S.32</span>.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">4. വിചാരണ മാറ്റിവെക്കൽ (Adjournments - O.17):</span>
+                        <p class="mt-1">അടിയന്തര സാഹചര്യങ്ങളിൽ മാത്രമേ വിചാരണ മാറ്റിവെക്കാൻ അനുവദിക്കൂ. ഒരു കക്ഷി തെളിവ് ഹാജരാക്കാൻ പരാജയപ്പെട്ടാൽ അവർക്കെതിരെ നടപടിയുമായി മുന്നോട്ട് പോകാൻ കോടതിക്ക് അധികാരമുണ്ട് <span class="statute-badge">O.17, R.3</span>.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section-box">
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mb-4">
+                    ഘട്ടം 6: വിധിതീർപ്പ് – വിധി, ഡിക്രി, ചിലവുകൾ
+                </h2>
+                
+                <div class="space-y-4 text-justify">
+                    <p class="font-semibold text-slate-600">കോടതി തന്റെ അന്തിമ തീരുമാനം പ്രഖ്യാപിക്കുന്ന ഘട്ടമാണിത്.</p>
+                    
+                    <div>
+                        <span class="font-bold underline">1. വിധിയും ഡിക്രിയും (Judgment & Decree):</span>
+                        <p class="mt-1">തീരുമാനത്തിനുള്ള കാരണങ്ങൾ അടങ്ങിയതാണ് <strong>വിധി (Judgment)</strong> <span class="statute-badge">S.33, O.20</span>. എന്നാൽ കക്ഷികളുടെ അവകാശങ്ങൾ അന്തിമമായി നിർണ്ണയിക്കുന്ന ഔദ്യോഗിക രേഖയാണ് <strong>ഡിക്രി (Decree)</strong> <span class="statute-badge">O.20, R.6A</span>. ഇത് പണം നൽകാനോ, ഇൻജംഗ്ഷനോ അല്ലെങ്കിൽ പ്രത്യേക കരാർ പാലിക്കാനോ (Specific performance) ഉള്ള ഉത്തരവാകാം.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">2. പലിശയും ചിലവുകളും (Interest & Costs):</span>
+                        <span class="legal-maxim">Curia expensas condemnare solet (കേസിൽ പരാജയപ്പെട്ട കക്ഷി കോടതി ചിലവുകൾ നൽകണമെന്ന് കോടതി സാധാരണയായി ഉത്തരവിടാറുണ്ട്)</span>
+                        <p class="mt-1">വിധി വന്ന തുകയ്ക്ക് പലിശ നൽകാനും <span class="statute-badge">S.34</span>, കേസ് നടത്തുന്നതിനായുണ്ടായ ചിലവുകൾ (Costs) അനുവദിക്കാനും കോടതിക്ക് അധികാരമുണ്ട് <span class="statute-badge">S.35, O.20A</span>. ഇത് കോടതിയുടെ വിവേചനാധികാരമാണ്.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">3. തിരുത്തലുകൾ (Amendment - S.152, S.153):</span>
+                        <p class="mt-1">വിധിയിലോ ഡിക്രിയിലോ അക്ഷരപിശകുകളോ കണക്കിലെ തെറ്റുകളോ സംഭവിച്ചിട്ടുണ്ടെങ്കിൽ അവ തിരുത്താൻ കോടതിക്ക് അധികാരമുണ്ട്.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section-box">
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mb-4">
+                    ഘട്ടം 7: വിധി നടപ്പിലാക്കൽ – എക്സിക്യൂഷൻ (Execution of Decree)
+                </h2>
+                
+                <div class="space-y-4 text-justify">
+                    <p class="font-semibold text-slate-600">കോടതി വിധി ഫലപ്രദമായി നടപ്പിലാക്കി അവകാശങ്ങൾ ലഭ്യമാക്കുന്ന ഘട്ടമാണിത്.</p>
+                    
+                    <div>
+                        <span class="font-bold underline">1. വിധി നടപ്പിലാക്കുന്ന രീതികൾ (Modes of Execution):</span>
+                        <p class="mt-1">വിധി അനുകൂലമായ വ്യക്തിക്ക് (Decree-holder) അത് നടപ്പിലാക്കാൻ അപേക്ഷ നൽകാം <span class="statute-badge">O.21, R.11</span>. പ്രധാന മാർഗ്ഗങ്ങൾ ഇവയാണ്:</p>
+                        <ul class="list-disc ml-5 mt-2 space-y-2">
+                            <li>സ്വത്ത് അറ്റാച്ച് ചെയ്യുകയും വിൽക്കുകയും ചെയ്യുക <span class="statute-badge">S.60</span>.</li>
+                            <li>സിവിൽ തടങ്കലിൽ വെക്കുക <span class="statute-badge">S.55</span>. (പണം നൽകാനുള്ള വിധിയിൽ സ്ത്രീകളെ അറസ്റ്റ് ചെയ്യുന്നത് <span class="statute-badge">S.56</span> പ്രകാരം നിരോധിച്ചിരിക്കുന്നു).</li>
+                            <li>ഒരു റിസീവറെ നിയമിക്കുക.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">2. നിയമപരമായ പിൻഗാമികൾക്കെതിരെയുള്ള നടപടി (S.52):</span>
+                        <p class="mt-1">വിധി നടപ്പിലാക്കുന്നതിന് മുൻപ് പ്രതി മരിക്കുകയാണെങ്കിൽ, അദ്ദേഹത്തിന്റെ പിൻഗാമികളുടെ കൈവശമുള്ള പ്രതിയുടെ സ്വത്തുക്കളിൽ നിന്ന് വിധി നടപ്പിലാക്കാവുന്നതാണ്.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">3. ഡിക്രി കൈമാറുന്നു (Transfer of Decree - S.39):</span>
+                        <p class="mt-1">സ്വത്ത് മറ്റൊരു കോടതിയുടെ പരിധിയിലാണെങ്കിൽ, വിധി നടപ്പിലാക്കുന്നതിനായി മറ്റൊരു കോടതിയിലേക്ക് അത് അയക്കാവുന്നതാണ് <span class="statute-badge">O.21, R.6</span>.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">4. തടസ്സവാദങ്ങൾ (Resistance & Claims):</span>
+                        <p class="mt-1">അറ്റാച്ച് ചെയ്ത സ്വത്തിൽ തങ്ങൾക്ക് അവകാശമുണ്ടെന്ന് കാണിച്ച് മൂന്നാം കക്ഷികൾക്ക് തടസ്സവാദം ഉന്നയിക്കാം <span class="statute-badge">O.21, R.58</span>.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">5. പുനഃസ്ഥാപിക്കൽ (Restitution - S.144):</span>
+                        <p class="mt-1">ഒരു കോടതി വിധിയിലൂടെ ലഭിച്ച ആനുകൂല്യം, പിന്നീട് ആ വിധി അപ്പീലിൽ റദ്ദാക്കപ്പെട്ടാൽ, അത് തിരികെ നൽകാൻ കോടതി ഉത്തരവിടും. "കോടതിയുടെ തെറ്റായ നടപടി ആരെയും ദ്രോഹിക്കരുത്" എന്ന തത്വമാണിത്.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section-box">
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mb-4">
+                    ഘട്ടം 8: വെല്ലുവിളികൾ – അപ്പീൽ, റിവ്യൂ, റിവിഷൻ
+                </h2>
+                
+                <div class="space-y-4 text-justify">
+                    <p class="font-semibold text-slate-600">കോടതി വിധിയിൽ തൃപ്തരല്ലാത്ത കക്ഷികൾക്ക് ഉന്നത കോടതികളെ സമീപിക്കാനുള്ള മാർഗ്ഗങ്ങളാണിവ.</p>
+                    
+                    <div>
+                        <span class="font-bold underline">1. അപ്പീലുകൾ (Appeals - S.96-112, O.41-44):</span>
+                        <p class="mt-1">ഒരു കീഴ്ക്കോടതി പുറപ്പെടുവിക്കുന്ന എല്ലാ ഡിക്രികൾക്കെതിരെയും അപ്പീൽ നൽകാൻ കക്ഷികൾക്ക് അവകാശമുണ്ട്. അപ്പീൽ കോടതിക്ക് വസ്തുതകളും നിയമങ്ങളും പുനഃപരിശോധിക്കാനുള്ള അധികാരമുണ്ട് <span class="statute-badge">O.41</span>. അപ്പീൽ നിലനിൽക്കുമ്പോൾ കീഴ്ക്കോടതി വിധി നടപ്പിലാക്കുന്നത് തടയാൻ സ്റ്റേ (Stay) അനുവദിക്കാവുന്നതാണ് <span class="statute-badge">O.41, R.5</span>.</p>
+                        <p class="mt-2 text-sm italic"><strong>രണ്ടാം അപ്പീൽ (Second Appeals):</strong> സുപ്രധാനമായ നിയമപ്രശ്നങ്ങൾ (Substantial question of law) ഉണ്ടെങ്കിൽ മാത്രമേ രണ്ടാമത്തെ അപ്പീൽ അനുവദിക്കൂ.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">2. റിവ്യൂ (Review - O.47):</span>
+                        <p class="mt-1">പുതിയ തെളിവുകൾ ലഭിക്കുകയോ, വിധിയിൽ പ്രകടമായ പിശകുകൾ സംഭവിക്കുകയോ ചെയ്താൽ വിധി പുറപ്പെടുവിച്ച അതേ കോടതിക്ക് തന്നെ അത് പുനഃപരിശോധിക്കാൻ (Review) സാധിക്കും.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">3. റിവിഷൻ (Revision - S.115):</span>
+                        <p class="mt-1">കീഴ്ക്കോടതികൾ അവരുടെ അധികാരപരിധി ലംഘിക്കുകയോ നിയമവിരുദ്ധമായി പ്രവർത്തിക്കുകയോ ചെയ്താൽ ഹൈക്കോടതിക്ക് ആ കേസിലെ രേഖകൾ വിളിപ്പിക്കാനും അത് തിരുത്താനുമുള്ള അധികാരമുണ്ട്.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">4. റഫറൻസ് (Reference - S.113, O.46):</span>
+                        <p class="mt-1">ഒരു കേസ് പരിഗണിക്കുമ്പോൾ ഉയർന്നുവരുന്ന സങ്കീർണ്ണമായ നിയമപ്രശ്നങ്ങളിൽ ഹൈക്കോടതിയുടെ അഭിപ്രായം തേടുന്നതിനെയാണ് റഫറൻസ് എന്ന് പറയുന്നത്.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section-box">
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mb-4">
+                    ഘട്ടം 9: അനുബന്ധ അധികാരങ്ങൾ – അടിസ്ഥാന തത്വങ്ങൾ
+                </h2>
+                
+                <div class="space-y-4 text-justify">
+                    <p class="font-semibold text-slate-600">നടപടിക്രമങ്ങളുടെ എല്ലാ ഘട്ടങ്ങളിലും കോടതിക്ക് ഉപയോഗിക്കാവുന്ന സവിശേഷ അധികാരങ്ങളാണിവ.</p>
+                    
+                    <div>
+                        <span class="font-bold underline">1. അന്തർലീനമായ അധികാരങ്ങൾ (Inherent Powers - S.151):</span>
+                        <p class="mt-1">നീതി നടപ്പിലാക്കുന്നതിനോ കോടതി നടപടികളെ ദുരുപയോഗം ചെയ്യുന്നത് തടയുന്നതിനോ ആവശ്യമായ ഉത്തരവുകൾ പുറപ്പെടുവിക്കാൻ കോടതിക്ക് സവിശേഷമായ അധികാരമുണ്ട്.</p>
+                        
+                        <span class="legal-maxim">Nemo debet bis vexari pro eadem causa (ഒരേ കാരണത്തിന് ഒരാളെ രണ്ടുതവണ ബുദ്ധിമുട്ടിക്കരുത്)</span>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">2. കേസുകൾ കൈമാറുന്നത് (Transfer of Suits - S.22-S.25):</span>
+                        <p class="mt-1">സൗകര്യത്തിനോ നീതിക്കോ വേണ്ടി ഒരു കേസ് ഒരു കോടതിയിൽ നിന്ന് മറ്റൊരു കോടതിയിലേക്ക് മാറ്റാൻ അധികാരപ്പെട്ട കോടതികൾക്ക് സാധിക്കും.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">3. സമയം ദീർഘിപ്പിച്ചു നൽകൽ (Enlargement of Time - S.148):</span>
+                        <p class="mt-1">ഏതെങ്കിലും നടപടികൾ പൂർത്തിയാക്കാൻ കോടതി നിശ്ചയിച്ചിട്ടുള്ള സമയം ആവശ്യാനുസരണം നീട്ടിനൽകാൻ കോടതിക്ക് സാധിക്കും.</p>
+                    </div>
+
+                    <div>
+                        <span class="font-bold underline">4. വിധിയുടെ ഫലം (Effect of Decree - S.11, S.12):</span>
+                        <p class="mt-1">അന്തിമ വിധി വന്നുകഴിഞ്ഞാൽ അതേ കാരണത്താൽ ഭാവിയിൽ കേസ് നൽകുന്നത് തടയപ്പെടുന്നു (Res Judicata).</p>
+
+                        <span class="legal-maxim">Interest Reipublicae Ut Sit Finis Litium (വ്യവഹാരങ്ങൾ ഒരു ഘട്ടത്തിൽ അവസാനിക്കേണ്ടത് ഭരണകൂടത്തിന്റെ താല്പര്യമാണ്)</span>
+                    </div>
+                </div>
+            </section>
+            <section class="section-box border-none">
+                <h2 class="text-xl md:text-2xl font-bold text-red-800 mb-6 flex items-center">
+                    <span class="mr-2">⚖️</span> പ്രധാന നിയമ തത്വങ്ങൾ (Key Maxims to Remember)
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white/50 p-4 border rounded shadow-sm">
+                        <span class="legal-maxim text-blue-900 font-bold">Res Judicata (S.11)</span>
+                        <p class="text-sm mt-2 leading-relaxed">ഒരിക്കൽ കോടതി തീർപ്പുകല്പിച്ച ഒരു വിഷയം വീണ്ടും വിചാരണയ്ക്ക് എടുക്കാൻ പാടില്ല.</p>
+                    </div>
+
+                    <div class="bg-white/50 p-4 border rounded shadow-sm">
+                        <span class="legal-maxim text-blue-900 font-bold">Actus Curiae Neminem Gravabit</span>
+                        <p class="text-sm mt-2 leading-relaxed">കോടതിയുടെ നടപടിക്രമങ്ങൾ മൂലം ആർക്കും ദോഷം സംഭവിക്കാൻ പാടില്ല (ഇതാണ് സെക്ഷൻ 144 പ്രകാരമുള്ള പുനഃസ്ഥാപനത്തിന് അടിസ്ഥാനം).</p>
+                    </div>
+
+                    <div class="bg-white/50 p-4 border rounded shadow-sm">
+                        <span class="legal-maxim text-blue-900 font-bold">Ex Debito Justitiae</span>
+                        <p class="text-sm mt-2 leading-relaxed">നീതിയുടെ കടമ എന്ന നിലയിൽ (കോടതിയുടെ അന്തർലീനമായ അധികാരങ്ങൾക്ക് - S.151 - അടിസ്ഥാനമായ തത്വം).</p>
+                    </div>
+
+                    <div class="bg-white/50 p-4 border rounded shadow-sm">
+                        <span class="legal-maxim text-blue-900 font-bold">Debitor Non Praesumitur Donare</span>
+                        <p class="text-sm mt-2 leading-relaxed">കടക്കാരൻ ഒരിക്കലും ദാനം ചെയ്യുന്നതായി കരുതുന്നില്ല (നിയമപരമായ പിൻഗാമികൾക്കെതിരെയുള്ള വിധി നടപ്പിലാക്കുമ്പോൾ - S.52 - ഇത് പ്രസക്തമാണ്).</p>
+                    </div>
+                </div>
+            </section>
+
+            <div id="additional-content"></div>
+
+        </div>
+        </main>
+
+    <div class="fixed bottom-6 right-6">
+        <button onclick="window.print()" class="bg-slate-800 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+            </svg>
+        </button>
+    </div>
+
+</body>
+</html>
