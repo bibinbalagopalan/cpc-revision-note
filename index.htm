@@ -9,77 +9,74 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Malayalam:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --paper-bg: #fdfaf1; /* Eye-friendly cream paper */
-            --ink-color: #1a202c;
-            --highlight: #fef3c7;
-        }
+        /* Core Styling */
+:root {
+    --paper-bg: #fdfaf1; /* Soft paper yellow */
+    --ink-color: #1a202c;
+    --border-color: #e2e8f0;
+}
 
-        body {
-            font-family: 'Noto Serif Malayalam', serif;
-            background-color: #d1d5db; /* Desk/Table color */
-            margin: 0;
-            padding: 10px;
-        }
+body {
+    font-family: 'Noto Serif Malayalam', serif;
+    background-color: var(--paper-bg); /* Paper color everywhere */
+    color: var(--ink-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
 
-        /* The Paper Container */
-        .paper-sheet {
-            background-color: var(--paper-bg);
-            max-width: 900px;
-            margin: 0 auto;
-            min-height: 100vh;
-            padding: 2rem; /* Balanced padding for all sides */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            position: relative;
-            /* Subtle horizontal lines that don't shift text */
-            background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px);
-            background-size: 100% 1.8rem;
-        }
+/* Full-width container with no forced side margins */
+.content-wrapper {
+    width: 100%;
+    max-width: 1000px; /* Limits width only on huge monitors for readability */
+    margin: 0 auto;
+    padding: 20px; /* Minimal padding just so text doesn't touch the glass */
+    box-sizing: border-box;
+}
 
-        /* Fixed Margin: Instead of pushing text, we put a thin border */
-        .paper-sheet {
-            border-left: 4px solid rgba(239, 68, 68, 0.2); /* Soft red margin line */
-        }
+/* Section styling without the "pad" margin */
+section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
 
-        @media (max-width: 640px) {
-            body { padding: 0; }
-            .paper-sheet {
-                padding: 1.25rem; /* More space for text on mobile */
-                border-left-width: 3px;
-            }
-            .legal-maxim {
-                font-size: 0.95rem;
-            }
-        }
+h1, h2 {
+    color: #991b1b; /* Deep red for headings */
+    margin-top: 0;
+}
 
-        .statute-badge {
-            background-color: var(--highlight);
-            border-bottom: 2px solid #f59e0b;
-            padding: 0 4px;
-            font-weight: bold;
-            color: #b91c1c;
-        }
+/* Statutes and Maxims - full width */
+.statute-badge {
+    background-color: #fef3c7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: 1px solid #f59e0b;
+}
 
-        .legal-maxim {
-            display: block;
-            background: rgba(255, 255, 255, 0.5);
-            border: 1px solid #e2e8f0;
-            border-left: 4px solid #475569;
-            padding: 12px;
-            margin: 1.5rem 0;
-            font-style: italic;
-        }
+.legal-maxim {
+    display: block;
+    background: rgba(0, 0, 0, 0.03);
+    border-left: 5px solid #475569;
+    padding: 15px;
+    margin: 20px 0;
+    font-style: italic;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-        h2 {
-            background-color: rgba(30, 58, 138, 0.05);
-            padding: 5px 10px;
-            border-radius: 4px;
-        }
-
-        section {
-            margin-bottom: 3rem;
-            line-height: 1.9;
-        }
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .content-wrapper {
+        padding: 15px; /* Even tighter for small screens */
+    }
+    
+    body {
+        font-size: 1rem;
+    }
+}
     </style>
 </head>
 <body class="py-4 px-2 md:py-12 md:px-3">
