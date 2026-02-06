@@ -9,28 +9,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Malayalam:wght@400;700&display=swap" rel="stylesheet">
     <style>
-    /* Mobile-specific fixes - Fixed version */
+    :root {
+        --paper-color: #fcfaf2;
+        --ink-color: #1e293b;
+        --legal-blue: #2563eb;
+        --margin-red: rgba(255, 0, 0, 0.2);
+    }
+
+    body {
+        font-family: 'Noto Serif Malayalam', serif;
+        background-color: #e5e7eb;
+        color: var(--ink-color);
+        line-height: 1.8;
+        box-sizing: border-box;
+    }
+
+    /* Paper Texture - Desktop version */
+    .paper {
+        background-color: var(--paper-color);
+        background-image: linear-gradient(#eee .1em, transparent .1em);
+        background-size: 100% 1.6em;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Desktop vertical lines using pseudo-elements */
+    @media (min-width: 769px) {
+        .paper::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 60px;
+            width: 2px; height: 100%;
+            background-color: var(--margin-red);
+            z-index: 1;
+        }
+        .ml-custom { margin-left: 5rem; }
+    }
+
+    /* Mobile-specific Fixes: Removing absolute lines to prevent overlap */
     @media (max-width: 768px) {
-        body {
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        .py-6.px-3 {
-            padding: 1rem 0.75rem !important;
-        }
-
         .paper {
+            margin: 0.5rem;
             padding: 1.5rem !important;
-            margin: 0 0.5rem;
+            background-image: none; /* Cleaner look for mobile */
+            border-left: 6px double var(--margin-red); /* Mimics the margin line safely */
+            border-radius: 4px;
         }
 
-        .ml-16.md\:ml-20 {
-            margin-left: 1rem !important;
-        }
-
-        .max-w-3xl {
-            max-width: 100% !important;
+        .ml-custom {
+            margin-left: 0; /* Reset margin since the border-left handles the visual gap */
         }
 
         h1 {
@@ -40,96 +68,41 @@
 
         .text-xl.md\:text-2xl {
             font-size: 1.25rem !important;
-            line-height: 1.4 !important;
-        }
-
-        .section-box {
-            padding-bottom: 1.25rem;
-            margin-bottom: 1.25rem;
         }
 
         p, li {
+            text-align: left; /* Better for Malayalam readability on narrow screens */
             word-wrap: break-word;
-            overflow-wrap: break-word;
-            text-align: justify;
-            /* Remove hyphens for Malayalam text */
-            hyphens: manual;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-box {
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
         }
 
         .legal-maxim {
-            font-size: 0.9rem;
-            margin: 0.75rem 0;
-            line-height: 1.5;
-        }
-
-        .bg-blue-50, .bg-yellow-50, .bg-white\/50 {
-            padding: 0.75rem !important;
-            margin: 0.5rem 0;
-        }
-
-        ul.list-disc {
-            margin-left: 1.25rem;
-            padding-right: 0.5rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        .grid-cols-1.md\:grid-cols-2 {
-            grid-template-columns: 1fr !important;
-            gap: 0.75rem;
-        }
-
-        .p-4 {
-            padding: 0.75rem !important;
-        }
-
-        .text-sm {
-            font-size: 0.875rem !important;
+            font-size: 0.95rem;
+            padding: 0.75rem;
+            background: #f1f5f9;
+            border-left: 4px solid #cbd5e1;
         }
     }
 
-    @media (max-width: 480px) {
-        .paper::before {
-            left: 40px;
-        }
-
-        .ml-16.md\:ml-20 {
-            margin-left: 0.5rem !important;
-        }
-
-        .paper {
-            padding: 1rem !important;
-            background-position: 40px 0;
-        }
-
-        h1 {
-            font-size: 1.5rem !important;
-        }
-
-        .text-xl.md\:text-2xl {
-            font-size: 1.125rem !important;
-        }
-
-        body {
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
+    .statute-badge {
+        background-color: #e2e8f0;
+        padding: 1px 6px;
+        border-radius: 4px;
+        font-weight: bold;
+        white-space: nowrap;
     }
 
-    /* Ensure text doesn't overflow */
-    * {
-        box-sizing: border-box;
-    }
-
-    .text-justify {
-        text-align: justify;
-    }
-
-    /* Improve readability on all devices */
-    p, li, .legal-maxim {
-        max-width: 100%;
+    .legal-maxim {
+        display: block;
+        font-style: italic;
+        color: #475569;
+        margin: 1rem 0;
     }
 </style>
 </head>
