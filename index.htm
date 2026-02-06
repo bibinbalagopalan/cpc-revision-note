@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ml">
 <head>
@@ -9,77 +10,64 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Malayalam:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Core Styling */
-:root {
-    --paper-bg: #fdfaf1; /* Soft paper yellow */
-    --ink-color: #1a202c;
-    --border-color: #e2e8f0;
-}
+        :root {
+            --paper-color: #fcfaf2;
+            --ink-color: #1e293b;
+            --legal-blue: #2563eb;
+        }
 
-body {
-    font-family: 'Noto Serif Malayalam', serif;
-    background-color: var(--paper-bg); /* Paper color everywhere */
-    color: var(--ink-color);
-    margin: 0;
-    padding: 0;
-    line-height: 1.8;
-}
+        body {
+            font-family: 'Noto Serif Malayalam', serif;
+            background-color: #e5e7eb; /* Desk color */
+            color: var(--ink-color);
+            line-height: 1.8;
+        }
 
-/* Full-width container with no forced side margins */
-.content-wrapper {
-    width: 100%;
-    max-width: 1000px; /* Limits width only on huge monitors for readability */
-    margin: 0 auto;
-    padding: 20px; /* Minimal padding just so text doesn't touch the glass */
-    box-sizing: border-box;
-}
+        /* Paper Texture Effect */
+        .paper {
+            background-color: var(--paper-color);
+            background-image: 
+                linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+                linear-gradient(#eee .1em, transparent .1em);
+            background-size: 100% 1.6em;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+        }
 
-/* Section styling without the "pad" margin */
-section {
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-}
+        .paper::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 80px;
+            width: 2px; height: 100%;
+            background-color: rgba(255, 0, 0, 0.2);
+        }
 
-h1, h2 {
-    color: #991b1b; /* Deep red for headings */
-    margin-top: 0;
-}
+        .section-box {
+            border-bottom: 1px solid #d1d5db;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
 
-/* Statutes and Maxims - full width */
-.statute-badge {
-    background-color: #fef3c7;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 0.9em;
-    border: 1px solid #f59e0b;
-}
+        .legal-maxim {
+            font-style: italic;
+            color: #475569;
+            font-family: serif;
+            display: block;
+            margin: 0.5rem 0;
+            border-left: 3px solid #cbd5e1;
+            padding-left: 1rem;
+        }
 
-.legal-maxim {
-    display: block;
-    background: rgba(0, 0, 0, 0.03);
-    border-left: 5px solid #475569;
-    padding: 15px;
-    margin: 20px 0;
-    font-style: italic;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Responsive adjustments */
-@media (max-width: 640px) {
-    .content-wrapper {
-        padding: 15px; /* Even tighter for small screens */
-    }
-    
-    body {
-        font-size: 1rem;
-    }
-}
+        .statute-badge {
+            background-color: #e2e8f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
     </style>
 </head>
-<body class="py-4 px-2 md:py-12 md:px-3">
+<body class="py-6 px-3 md:py-12">
 
     <main class="max-w-3xl mx-auto paper rounded-sm p-6 md:p-12 min-h-screen">
         
